@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    font-family: 'Raleway', sans-serif;
+}
+
+.headercont {
+    height: 80px;
+    width: 100vw;
+    background-color: #3F2E00;
+}
+
+.searchinput {
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    width: 35%;
+    margin-top: 20px;
+    height: 26px;
+    padding: 2px;
+    border-radius: 10px;
+    background-color: #513B00;
+    border: 1px solid #9F9F9F;
+    color: white;
+    font-size: 17pt;
+}
+
+.background {
+    z-index: -1;
+    background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/pexels-ylanite-koppens-697662.jpg');
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    overflow: hidden;
+    position: fixed;
+    background-size: cover;
+    background-position: top;
+}
+
+.maincontent {
+    min-width: 70%;
+    width: 480px;
+    height: 75vh;
+    background-color: #3F2E00;
+    border: 1px solid #9F9F9F;
+    border-radius: 20px;
+    margin: 10px;
+    margin-top: 3%;
+    position: absolute;
+    left: 50%;
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.profileimg {
+    height: 80%;
+}
+
+.menuimg {
+    height: 80%;
+}
+
+.hamburgerbutton {
+    margin-left: 25px;
+    height: 100%;
+    background: none;
+    border: none;
+}
+
+.profilebutton {
+    position: absolute;
+    right: 25px;
+    height: 80px;
+    padding-top: 5px;
+}
+
+.hamburgermenu {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    background-color: #513B00;
+}
+
+.hamburgermenu a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+}
+
+.hamburgermenu a:hover {
+    color: #a0a0a0;
+}
+
+.menulink {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    display: block;
+    transition: 0.3s;
+}
+
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-width: 480px) {
+    .headercont {
+        font-size: 1.2rem;
+        max-width: 480px;
+    }
+
+    .maincontent {
+        font-size: 1.2rem;
+        max-width: 480px;
+        min-width: 70%;
+        width: 85%;
+        height: 150vh;
+        background-color: #3F2E00;
+        border: 1px solid #9F9F9F;
+        border-radius: 10px;
+        margin-top: 10%;
+        margin-bottom: 20%;
+        margin-left: -1%;
+        position: center;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
+    .headercont {
+        height: 80px;
+        width: 150vw;
+        background-size: 20%;
+        background-color: #3F2E00;
+    }
+
+    .background {
+        z-index: -1;
+        background: linear-gradient( rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('img/pexels-ylanite-koppens-697662.jpg');
+        width: 100%;
+        height: 100%;
+        top: 0px;
+        overflow: hidden;
+        position: fixed;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .hamburgermenu {
+        font-size: 1.2rem;
+        max-width: 480px;
+        height: 150vh;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        overflow-x: hidden;
+        transition: 1s;
+        padding-top: 60px;
+        background-color: #513B00;
+    }
+    .searchinput {
+        position: center;
+        left: 50%;
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        width: 40%;
+        margin-top: 20px;
+        height: 26px;
+        padding: 2px;
+        border-radius: 10px;
+        background-color: #513B00;
+        border: 1px solid #9F9F9F;
+        color: white;
+        font-size: 1.2rem;
+    }
+
+    .profilebutton {
+        position: absolute;
+        right: 5%;
+        height: 80px;
+        padding-top: 5px;
+    }
+}
+
+
+
+
+
+
+/* changelog: */
+/* Bas Broekhoven | 21-08-2020 18:50 | gestart met de frontend styling, nog niet volledig en responsive */
+/* Bas Broekhoven | 24-08-2020 12:50 | hamburger menu werkende en knoppen netjes */
+/* Bas Broekhoven | 24-08-2020 21:15 | Marges knoppen verbeterd en font toegevoegd */
+/* Mohamed el K | 25-08-2020 13:00 | Responsive maken van de headcontent */
+/* Mohamed el K | 25-08-2020 16:00 | Responsive maken van de  maincontent*/
+/* Mohamed el K | 25-08-2020 16:30 | Volledig Responsive afronding*/
