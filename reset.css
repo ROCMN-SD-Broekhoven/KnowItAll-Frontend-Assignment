@@ -15,7 +15,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -41,6 +40,3 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-
-/* changelog: */
-/* Bas Broekhoven | 21-08-2020 18:50 | document gevuld met een van internet gekopieerde reset */

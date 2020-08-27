@@ -1,0 +1,122 @@
+#begin {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    min-height: 70vh;
+    margin: auto;
+    text-align: center;
+    border-radius: 20px;
+    color: #ffffff;
+}
+#begin h3{
+    font-size: 29px;
+    margin-bottom: 50px;
+    color: white;
+    margin-top: 30px;
+}
+
+.searchitem {
+    height: fit-content;
+    width: 80%;
+    margin: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid white;
+    border-radius: 15px;
+
+}
+.knop{
+    margin: 30px;
+}
+.overlay{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+}
+.titelbericht{
+    font-size: larger;
+    color: white;
+    margin-left: 20px;
+    margin: 15px;
+}
+
+.overlaycontent {
+    min-width: 75%;
+    width: 530px;
+    height: 75vh;
+    background-color: #3F2E00;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin: 10px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    position: relative;
+}
+
+@media screen and (max-width: 480px) {
+
+    .overlaycontent {
+        font-size: 1.2rem;
+        max-width: 480px;
+        min-width: 70%;
+        width: 85%;
+        background-color: #3F2E00;
+        border-radius: 10px;
+        margin-left: -1%;
+        position: center;
+    }}
+
+.linkbutton{
+    color: white;
+    display: inline-block;
+    margin-left: 15px;
+    margin-bottom: 15px;
+    text-decoration: none;
+}
+.linkbutton:hover{
+    color: rgb(202, 202, 202);
+}
+
+@media screen and (max-width: 480px) {
+    p {
+        font-size: 1.2rem;
+        max-width: 480px;
+    }
+
+    #begin {
+        width: 75vw;
+        left: calc(20vw - 50px);
+    }
+
+    #begin label {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    #begin select {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+    }
+
+    #begin button {
+        display: block;
+        margin: auto;
+        color: black;
+    }
+}
+
+
+
+
+
+
+/* Mohamed el K |  | Responsive maken van de headcontent */
+/* Mohamed el K |  | Responsive maken van de  maincontent*/
+/* Mohamed el K |  | Volledig Responsive afronding*/
+/* Mohamed el K |  | Volledig css aangemaakt*/

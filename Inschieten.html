@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+    <title>Weetje Inschieten | KnowItAll</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="inschieten.css">
+</head>
+
+<body>
+    <header class="headercont">
+        <button class="hamburgerbutton" onclick="openMenu()">
+            <img src="img/hamburger.png" alt="hamburger menu knop" class="menuimg">
+        </button>
+        <input type="text" class="searchinput" id="zoekbalk">
+        <a class="profilebutton" href="Profielpagina.html">
+            <img src="img/629576-200.png" alt="profiel pagina knop" class="profileimg">
+        </a>
+    </header>
+    <div class="hamburgermenu" id="menu">
+        <a href="#" onclick="closeMenu()" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="Homepage.html" class="menulink">Home</a>
+        <a href="willekeurig.html" class="menulink">Willekeurig</a>
+        <a href="Inschieten.html" class="menulink">Inschieten</a>
+        <a href="Profielpagina.html" class="menulink">profiel</a>
+        <a href="beheer.html" class="menulink">beheer</a>
+    </div>
+    <div class="background">
+    </div>
+
+    <div class="maincontent">
+        <h2>Weetje inschieten:</h2>
+
+        <div class="inschieten">
+            <form action="#" class="formulier">
+
+                <label for="titel">Titel: </label><br>
+                <input type="text" id="titel" name="titel"><br>
+                <label for="datum">JPG afbeelding: </label><br>
+                <input type="file" id="afbeelding" name="afbeelding" accept="image/jpeg"><br>
+                <label for="titel">Weetje: </label><br>
+                <textarea id="w3review" name="w3review" rows="4" class="weetje"></textarea><br>
+                <input type="submit" value="Inschieten" class="knoppie">
+            </form>
+        </div>
+
+        <!-- pagina content hier -->
+    </div>
+    <script>
+        var hamburger = document.getElementById("menu");
+        var zoekbalk = document.getElementById("zoekbalk");
+        zoekbalk.addEventListener('keypress', function (e) {
+            // checkt of enter ingedrukt word bij de zoekbalk
+            if (e.keyCode == 13) {
+                search();
+            }
+        }, false);
+        function search() {
+            // doet een get request aan de search.php pagina nadat hij alle spaties in de query voor underscores heeft vervangen
+            var searchCleaned = zoekbalk.value;
+            searchCleaned = searchCleaned.replace(/ /g, "_");
+            window.location.replace("search.php?search=" + searchCleaned);
+        }
+        function openMenu() {
+            hamburger.style.width = "250px";
+        }
+        function closeMenu() {
+            hamburger.style.width = "0px";
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- changelog: -->
+<!-- Bas Broekhoven | 21-08-2020 18:50 | basisopmaak toegevoegd en javascript functioneel gemaakt -->
+<!-- Bas Broekhoven | 24-08-2020 12:50 | hamburger menu werkende -->
+<!-- Mohamed el K | 24-08-2020 13:00 | contentview toegevoegd voor responsive cont -->

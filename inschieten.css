@@ -1,0 +1,67 @@
+.maincontent{
+    text-align: center;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.maincontent::-webkit-scrollbar {
+    display: none;
+  }
+
+.formulier{
+    text-align: center;
+    line-height: 40px;
+
+}
+
+h2{
+    margin-top: 30px;
+    font-size: 29px;
+    color: white;
+}
+
+.inschieten {
+    margin-top: 50px;
+    color: white;
+    font-size: 20px;
+}
+
+input{
+    
+    font-size: 12pt;
+}
+
+.weetje , #titel{
+    padding: 2px;
+    border-radius: 10px;
+    background-color: #513B00;
+    border: 2px solid white;
+    color: white;
+    font-size: 20pt;
+    width: 30%;
+}
+
+.knoppie{
+    height: 40px;
+    width: fit-content;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: #513B00;
+    border: 2px solid white;
+    color: white;
+    margin-bottom: 50px;
+}
+
+#titel{
+    
+    height: 26px;
+}
+
+@media screen and (max-width: 425px) {
+
+    
+input{
+    
+    font-size: 8pt;
+}
+}

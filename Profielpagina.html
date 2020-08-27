@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+    <title>Profielpagina | KnowItAll</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Profielpagina.css">
+</head>
+
+<body>
+    <header class="headercont">
+        <button class="hamburgerbutton" onclick="openMenu()">
+            <img src="img/hamburger.png" alt="hamburger menu knop" class="menuimg">
+        </button>
+        <input type="text" class="searchinput" id="zoekbalk">
+        <a class="profilebutton" href="Profielpagina.html">
+            <img src="img/629576-200.png" alt="profiel pagina knop" class="profileimg">
+        </a>
+    </header>
+    <div class="hamburgermenu" id="menu">
+        <a href="#" onclick="closeMenu()" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="Homepage.html" class="menulink">Home</a>
+        <a href="willekeurig.html" class="menulink">Willekeurig</a>
+        <a href="Inschieten.html" class="menulink">Inschieten</a>
+        <a href="Profielpagina.html" class="menulink">profiel</a>
+        <a href="beheer.html" class="menulink">beheer</a>
+    </div>
+<div class="background">
+</div>
+<div class="maincontent">
+    <div id="begin">
+        <h3 class="titel">Profielpagina</h3>
+        <label for="p1" class="hidden">Gebruikersnaam:</label><br>
+        <input type="text" id="p1" class='Nm' maxlength="20"><br>
+        <label for="p2" class="hidden">Rol:</label><br>
+        <input type="text" id="p2" class='Nm' maxlength="20"><br>
+        <label  class="hidden">Aantal weetjes:</label><br>
+        <p><B> 5 </B></p>
+        <label  class="hidden">Datum van registratie:</label><br>
+        <p><B>25-08-2020</B></p>
+        <button role="button" tabindex="0" class="knoppie"><B>Klik om te wijzigen</B></button>
+    </div>
+</div>
+<script>
+    var hamburger = document.getElementById("menu");
+    var zoekbalk = document.getElementById("zoekbalk");
+    zoekbalk.addEventListener('keypress', function (e) {
+        // checkt of enter ingedrukt word bij de zoekbalk
+        if (e.keyCode == 13) {
+            search();
+        }
+    }, false);
+    function search() {
+        // doet een get request aan de search.php pagina nadat hij alle spaties in de query voor underscores heeft vervangen
+        var searchCleaned = zoekbalk.value;
+        searchCleaned = searchCleaned.replace(/ /g, "_");
+        // window.location.replace("search.php?search=" + searchCleaned);
+        window.location.replace("search.html");
+    }
+    function openMenu() {
+        hamburger.style.width = "250px";
+    }
+    function closeMenu() {
+        hamburger.style.width = "0px";
+    }
+</script>
+</body>
+
+</html>
+
+<!-- changelog: -->
+<!-- Mohamed el K | 24-08-2020 13:00 | contentview toegevoegd voor responsive cont -->
+<!-- Mohamed el K | 24-08-2020 13:00 | Maincontent gemaakt en toegevoegd -->
+<!-- Mohamed el K | 24-08-2020 18:00 | Maincontent afgerond. Profielpagina af-->

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+    <title>Goedkeuren | KnowItAll</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="goedkeuren.css">
+</head>
+
+<body>
+    <header class="headercont">
+        <button class="hamburgerbutton" onclick="openMenu()">
+            <img src="img/hamburger.png" alt="hamburger menu knop" class="menuimg">
+        </button>
+        <input type="text" class="searchinput" id="zoekbalk">
+        <a class="profilebutton" href="Profielpagina.html">
+            <img src="img/629576-200.png" alt="profiel pagina knop" class="profileimg">
+        </a>
+    </header>
+    <div class="hamburgermenu" id="menu">
+        <a href="#" onclick="closeMenu()" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="Homepage.html" class="menulink">Home</a>
+        <a href="willekeurig.html" class="menulink">Willekeurig</a>
+        <a href="Inschieten.html" class="menulink">Inschieten</a>
+        <a href="Profielpagina.html" class="menulink">profiel</a>
+        <a href="beheer.html" class="menulink">beheer</a>
+    </div>
+    <div class="background">
+    </div>
+    <div class="maincontent">
+        <h1 class="paginatitel">Goed te keuren weetjes:</h1>
+        <div class="scrollcont">
+            <div class="divider"></div>
+            <div class="searchitem">
+                <h2 class="titelbericht">Dit is een voorbeeld weetje over ontdekkingsrijzen #9</h2>
+                <a class="linkbutton" href="#" onclick="openOL(1)">lees meer...</a>
+                <a class="linkbutton" href="#" onclick="">Goedkeuren</a>
+                <a class="linkbutton" href="#" onclick="">Verwijderen</a>
+            </div>
+            <div class="searchitem">
+                <h2 class="titelbericht">Dit is een voorbeeld weetje over ontdekkingsrijzen #10</h2>
+                <a class="linkbutton" href="#" onclick="openOL(2)">lees meer...</a>
+                <a class="linkbutton" href="#" onclick="">Goedkeuren</a>
+                <a class="linkbutton" href="#" onclick="">Verwijderen</a>
+            </div>
+            <div class="searchitem">
+                <h2 class="titelbericht">Dit is een voorbeeld weetje over ontdekkingsrijzen #11</h2>
+                <a class="linkbutton" href="#" onclick="openOL(3)">lees meer...</a>
+                <a class="linkbutton" href="#" onclick="">Goedkeuren</a>
+                <a class="linkbutton" href="#" onclick="">Verwijderen</a>
+            </div>
+            <div class="searchitem">
+                <h2 class="titelbericht">Dit is een voorbeeld weetje over ontdekkingsrijzen #12</h2>
+                <a class="linkbutton" href="#" onclick="openOL(4)">lees meer...</a>
+                <a class="linkbutton" href="#" onclick="">Goedkeuren</a>
+                <a class="linkbutton" href="#" onclick="">Verwijderen</a>
+            </div>
+            <div class="searchitem">
+                <h2 class="titelbericht">Dit is een voorbeeld weetje over ontdekkingsrijzen #13</h2>
+                <a class="linkbutton" href="#" onclick="openOL(5)">lees meer...</a>
+                <a class="linkbutton" href="#" onclick="">Goedkeuren</a>
+                <a class="linkbutton" href="#" onclick="">Verwijderen</a>
+            </div>
+            <div class="searchitem">
+                <h2 class="titelbericht">Dit is een voorbeeld weetje over ontdekkingsrijzen #14</h2>
+                <a class="linkbutton" href="#" onclick="openOL(6)">lees meer...</a>
+                <a class="linkbutton" href="#" onclick="">Goedkeuren</a>
+                <a class="linkbutton" href="#" onclick="">Verwijderen</a>
+            </div>
+            <div class="searchitem">
+                <h2 class="titelbericht">Dit is een voorbeeld weetje over ontdekkingsrijzen #15</h2>
+                <a class="linkbutton" href="#" onclick="openOL(7)">lees meer...</a>
+                <a class="linkbutton" href="#" onclick="">Goedkeuren</a>
+                <a class="linkbutton" href="#" onclick="">Verwijderen</a>
+            </div>
+            <div class="searchitem">
+                <h2 class="titelbericht">Dit is een voorbeeld weetje over ontdekkingsrijzen #16</h2>
+                <a class="linkbutton" href="#" onclick="openOL(8)">lees meer...</a>
+                <a class="linkbutton" href="#" onclick="">Goedkeuren</a>
+                <a class="linkbutton" href="#" onclick="">Verwijderen</a>
+            </div>
+        </div>
+    </div>
+    <div id="overlay" class="overlay" style="display: none;">
+        <div class="overlaycontent">
+            <button onclick="closeOL()" class="knop">
+                Close Overlay
+            </button>
+            <!-- weetje hier -->
+        </div>
+    </div>
+    <script>
+        var hamburger = document.getElementById("menu");
+        var zoekbalk = document.getElementById("zoekbalk");
+        zoekbalk.addEventListener('keypress', function (e) {
+            // checkt of enter ingedrukt word bij de zoekbalk
+            if (e.keyCode == 13) {
+                search();
+            }
+        }, false);
+        function search() {
+            // doet een get request aan de search.php pagina nadat hij alle spaties in de query voor underscores heeft vervangen
+            var searchCleaned = zoekbalk.value;
+            searchCleaned = searchCleaned.replace(/ /g, "_");
+            // window.location.replace("search.php?search=" + searchCleaned);
+            window.location.replace("search.html");
+        }
+        function openMenu() {
+            hamburger.style.width = "250px";
+        }
+        function closeMenu() {
+            hamburger.style.width = "0px";
+        }
+        function openOL(nr) {
+            document.getElementById("overlay").style.display = "block";
+        }
+        function closeOL() {
+            document.getElementById("overlay").style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

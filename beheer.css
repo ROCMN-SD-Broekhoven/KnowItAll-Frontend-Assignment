@@ -1,0 +1,82 @@
+*{
+    overflow-y: scroll;
+    -ms-overflow-style: none;  
+    scrollbar-width: none;  
+}
+*::-webkit-scrollbar { width: 0 !important }
+
+#begin {
+    margin: auto;
+    width: 30vw;
+    min-height: 70vh;
+    text-align: center;
+    border-radius: 20px;
+    color: #ffffff;
+}
+
+#p1.Nm,#p2.Nm,#p3.Nm{
+    background-color: #513B00 ;
+}
+
+body{
+    overflow-Y: scroll ;
+    overflow-x: hidden;
+}
+
+
+
+#begin label{
+    margin-bottom: 10px;
+}
+
+#begin select{
+    margin-bottom: 20px;
+}
+
+#begin{
+    font-size: 20px;
+    line-height: 40px;
+}
+
+#begin input {
+    padding: 2px;
+    border-radius: 10px;
+    background-color: #513B00;
+    border: 2px solid white;
+    color: white;
+    width: 98%;
+    height: 26px;
+
+}
+
+.titel{
+    margin-top: 30px;
+    font-size: 29px;
+    margin-bottom: 50px;
+}
+
+.knoppie{
+    height: 40px;
+    width: fit-content;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: #513B00;
+    border: 2px solid white;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.knoppie2{
+    height: 40px;
+    width: fit-content;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: #513B00;
+    border: 2px solid white;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+@media screen and (max-width: 480px) {
+}
