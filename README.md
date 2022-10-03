@@ -1,2 +1,2 @@
 # KnowItAll
-school opdracht rocmn groep 8 vakantie
+school opdracht rocmn gemaakt door groep 8 in vakantie na 1e jaar cohort 2019. Niet volledig.
